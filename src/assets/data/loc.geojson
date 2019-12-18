@@ -1,0 +1,12 @@
+{
+  "features":
+  [{"geometry": {
+    "type": "Point",
+    "coordinates": [35.739626, 51.446841]
+  },
+  "properties": {
+    "name": "TIC"
+  }
+  }
+  ]
+}

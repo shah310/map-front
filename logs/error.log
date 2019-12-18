@@ -1,0 +1,56 @@
+2019/12/17 12:39:28 [notice] 6716#12316: signal process started
+2019/12/18 10:18:11 [emerg] 2412#7488: "server" directive is not allowed here in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:11
+2019/12/18 10:21:11 [emerg] 5896#14576: "server" directive is not allowed here in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:11
+2019/12/18 10:23:40 [emerg] 3004#13128: unknown directive "servername" in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:17
+2019/12/18 10:24:09 [emerg] 6608#14624: unknown directive "servername" in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:17
+2019/12/18 10:24:16 [emerg] 12732#13040: unknown directive "servername" in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:17
+2019/12/18 10:24:33 [emerg] 6016#10764: unknown directive "servername" in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:17
+2019/12/18 10:25:04 [emerg] 10328#12960: invalid number of arguments in "root" directive in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:20
+2019/12/18 10:25:53 [emerg] 7864#12132: invalid number of arguments in "root" directive in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:19
+2019/12/18 10:26:20 [emerg] 14616#14332: no "events" section in configuration
+2019/12/18 10:26:50 [notice] 6428#7556: signal process started
+2019/12/18 10:26:50 [error] 6428#7556: OpenEvent("Global\ngx_quit_5716") failed (2: The system cannot find the file specified)
+2019/12/18 10:28:30 [notice] 6564#15124: signal process started
+2019/12/18 10:28:30 [error] 6564#15124: OpenEvent("Global\ngx_reload_5716") failed (2: The system cannot find the file specified)
+2019/12/18 10:34:15 [notice] 7852#2412: signal process started
+2019/12/18 10:34:15 [error] 7852#2412: OpenEvent("Global\ngx_reload_5716") failed (2: The system cannot find the file specified)
+2019/12/18 10:35:53 [error] 9544#4868: *1 CreateFile() "C:\Users\sahmadie\Desktop\nginx-1.17.6/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2019/12/18 10:36:25 [notice] 14932#14512: signal process started
+2019/12/18 10:36:46 [notice] 7316#13800: signal process started
+2019/12/18 10:36:46 [emerg] 13176#12532: bind() to [::1]:4200 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 10:37:08 [emerg] 9572#12096: invalid number of arguments in "root" directive in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:23
+2019/12/18 10:37:20 [notice] 14472#10024: signal process started
+2019/12/18 10:39:17 [notice] 10496#14904: signal process started
+2019/12/18 10:40:05 [emerg] 1060#5500: invalid number of arguments in "root" directive in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:23
+2019/12/18 10:40:10 [emerg] 9272#10032: invalid number of arguments in "root" directive in C:\Users\sahmadie\Desktop\nginx-1.17.6/conf/nginx.conf:23
+2019/12/18 10:47:48 [notice] 10728#7924: signal process started
+2019/12/18 10:47:48 [emerg] 3452#10328: bind() to 0.0.0.0:4200 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 10:48:14 [notice] 12368#14260: signal process started
+2019/12/18 10:48:50 [notice] 13172#13016: signal process started
+2019/12/18 10:48:50 [emerg] 3452#10328: bind() to [::1]:4200 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 10:49:03 [notice] 15320#7304: signal process started
+2019/12/18 10:51:58 [notice] 7884#14092: signal process started
+2019/12/18 10:52:07 [notice] 9292#9496: signal process started
+2019/12/18 10:52:32 [notice] 8940#2676: signal process started
+2019/12/18 10:52:59 [notice] 13292#13660: signal process started
+2019/12/18 10:59:47 [notice] 14060#11492: signal process started
+2019/12/18 10:59:52 [error] 13512#14616: *31 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "http://[::1]:4200/", host: "localhost"
+2019/12/18 11:00:06 [error] 13512#14616: *86 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576654204934 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654204934", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:00:18 [error] 13512#14616: *93 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/985/1d2gkiao/eventsource HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/985/1d2gkiao/eventsource", host: "localhost", referrer: "http://localhost/sockjs-node/iframe.html"
+2019/12/18 11:00:32 [error] 13512#14616: *195 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 192.168.31.186, server: _, request: "GET /sockjs-node/720/450spqdo/jsonp?c=_jp.ahtwse5 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/720/450spqdo/jsonp?c=_jp.ahtwse5", host: "192.168.31.51", referrer: "http://192.168.31.51/"
+2019/12/18 11:00:44 [error] 13512#14616: *255 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 192.168.31.186, server: _, request: "GET /sockjs-node/info?t=1576654163144 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654163144", host: "192.168.31.51", referrer: "http://192.168.31.51/"
+2019/12/18 11:00:56 [error] 13512#14616: *290 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576654255883 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654255883", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:01:09 [error] 13512#14616: *304 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576654268901 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654268901", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:01:22 [error] 13512#14616: *320 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576654281959 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654281959", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:01:38 [error] 13512#14616: *345 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/564/gk3ov4th/websocket HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/564/gk3ov4th/websocket", host: "localhost"
+2019/12/18 11:01:51 [error] 13512#14616: *371 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576654310017 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576654310017", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:02:05 [error] 13512#14616: *419 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 192.168.31.186, server: _, request: "POST /sockjs-node/354/bz4yftgm/xhr?t=1576654244455 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/354/bz4yftgm/xhr?t=1576654244455", host: "192.168.31.51", referrer: "http://192.168.31.51/"
+2019/12/18 11:02:21 [error] 13512#14616: *466 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "POST /sockjs-node/942/ujrzxzl0/xhr?t=1576654340202 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/942/ujrzxzl0/xhr?t=1576654340202", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:03:37 [error] 13512#14616: *466 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "POST /sockjs-node/942/ujrzxzl0/xhr?t=1576654416336 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/942/ujrzxzl0/xhr?t=1576654416336", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:04:53 [error] 13512#14616: *466 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "POST /sockjs-node/942/ujrzxzl0/xhr?t=1576654492408 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/942/ujrzxzl0/xhr?t=1576654492408", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:06:09 [error] 13512#14616: *466 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "POST /sockjs-node/942/ujrzxzl0/xhr?t=1576654568464 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/942/ujrzxzl0/xhr?t=1576654568464", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:07:25 [error] 13512#14616: *466 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "POST /sockjs-node/942/ujrzxzl0/xhr?t=1576654644526 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/942/ujrzxzl0/xhr?t=1576654644526", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:38:38 [error] 13512#14616: *488 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /polyfills.js HTTP/1.1", upstream: "http://[::1]:4200/polyfills.js", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:38:58 [error] 13512#14616: *514 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/info?t=1576656537309 HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/info?t=1576656537309", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:39:13 [error] 13512#14616: *543 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: _, request: "GET /sockjs-node/909/o1wxlj3e/jsonp?c=_jp.as5b4ip HTTP/1.1", upstream: "http://[::1]:4200/sockjs-node/909/o1wxlj3e/jsonp?c=_jp.as5b4ip", host: "localhost", referrer: "http://localhost/"
+2019/12/18 11:40:47 [notice] 4672#7688: signal process started
