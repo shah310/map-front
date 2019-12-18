@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class FileUploadComponent implements OnInit {
   form: FormGroup;
+  geoTags;
 
   constructor(
     public fb: FormBuilder,
@@ -35,8 +36,10 @@ export class FileUploadComponent implements OnInit {
     formData.append("myFile", this.form.get('myFile').value);
 
     this.http.post('http://localhost:8080/upload', formData).subscribe(
-      (response) => console.log(response),
+      // (response) => console.log(response),
+      (response) => this.geoTags = response,
       (error) => console.log(error)
     );
+    console.log(this.geoTags)
   }
 }
