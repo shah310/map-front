@@ -30,7 +30,7 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.initMap();
-    this.marker.makeMarker(this.map);
+    // this.marker.makeMarker(this.map);
   }
 
   initMap() {

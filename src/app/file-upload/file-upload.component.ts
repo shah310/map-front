@@ -3,6 +3,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MarkerService } from './../_services/marker.service';
 import * as L from 'leaflet';
+import { CombineLatestOperator } from 'rxjs/internal/observable/combineLatest';
+
+const iconRetinaUrl = 'assets/marker-icon-2x.png';
+const iconUrl = 'assets/marker-icon.png';
+const shadowUrl = 'assets/marker-shadow.png';
+const iconDefault = L.icon({
+  iconRetinaUrl: iconRetinaUrl,
+  iconUrl: iconUrl,
+  shadowUrl: shadowUrl,
+  iconSize:     [25, 41],
+  iconAnchor:   [12, 41],
+  popupAnchor:  [1, -34],
+  tooltipAnchor:[16, -28],
+  shadowSize:   [41, 41]
+});
+//L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
   selector: 'app-file-upload',
@@ -10,9 +26,8 @@ import * as L from 'leaflet';
   styleUrls: ['./file-upload.component.css']
 })
 
-export class FileUploadComponent implements OnInit {
+export class FileUploadComponent implements AfterViewInit {
   form: FormGroup;
-  geoTags;
   private map;
 
   constructor(
@@ -26,7 +41,8 @@ export class FileUploadComponent implements OnInit {
 
   ngAfterViewInit() {
     this.initMap();
-   }
+    // this.marker.makeMarker(this.map);
+  }
 
   uploadFile(event: Event) {
     const img = (event.target as HTMLInputElement).files[0];
@@ -40,23 +56,29 @@ export class FileUploadComponent implements OnInit {
     const formData: any = new FormData();
     formData.append('myFile', this.form.get('myFile').value);
 
-    this.http.post('http://localhost:8080/upload', formData).subscribe(
+    this.http.post('http://192.168.31.51/upload', formData).subscribe(
       // (response) => console.log(response),
-      (response) => this.geoTags = response,
+      (response: Response) => {
+        let resStr = JSON.stringify(response);
+        let geoTags = JSON.parse(resStr);
+        L.marker([geoTags.Lat, geoTags.Lng], {icon: iconDefault}).addTo(this.map);
+        this.map.setView([geoTags.Lat, geoTags.Lng], 16);
+      },
       (error) => console.log(error)
-    );
-    this.map.setView([this.geoTags.lat, this.geoTags.lng], 16);
-  }
-  initMap() {
-    this.map = L.map('map', {
-      center: [35.699177, 51.376141],
-      zoom: 12
-    });
-
-    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
-    tiles.addTo(this.map);
+      );
+    }
+    initMap() {
+      const lat = 35.699177;
+      const lng = 51.376141;
+      this.map = L.map('map', {
+        center: [lat, lng],
+        zoom: 12
+      });
+      const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      });
+      tiles.addTo(this.map);
+      L.marker([lat, lng], {icon: iconDefault}).addTo(this.map);
   }
 }
