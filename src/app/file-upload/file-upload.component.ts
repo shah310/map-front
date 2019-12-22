@@ -59,9 +59,11 @@ export class FileUploadComponent implements AfterViewInit {
     this.http.post('http://192.168.31.51/upload', formData).subscribe(
       // (response) => console.log(response),
       (response: Response) => {
+        console.log(response)
         let resStr = JSON.stringify(response);
         let geoTags = JSON.parse(resStr);
-        L.marker([geoTags.Lat, geoTags.Lng], {icon: iconDefault}).addTo(this.map);
+        L.marker([geoTags.Lat, geoTags.Lng], {icon: iconDefault}).addTo(this.map)
+        .bindPopup("Latitude: " + geoTags.Lat + "<br />Longitude: " + geoTags.Lng);
         this.map.setView([geoTags.Lat, geoTags.Lng], 16);
       },
       (error) => console.log(error)
