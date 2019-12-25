@@ -81,6 +81,8 @@ export class FileUploadComponent implements AfterViewInit {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       });
       tiles.addTo(this.map);
-      L.marker([lat, lng], {icon: iconDefault}).addTo(this.map);
+      L.marker([lat, lng], {icon: iconDefault}).addTo(this.map)
+      .bindPopup("Latitude: " + lat + "<br />Longitude: " + lng);
+      ;
   }
 }
