@@ -10,9 +10,8 @@ import * as L from 'leaflet';
   styleUrls: ['./file-upload.component.css']
 })
 
-export class FileUploadComponent implements OnInit {
+export class FileUploadComponent implements AfterViewInit {
   form: FormGroup;
-  geoTags;
   private map;
 
   constructor(
@@ -41,11 +40,10 @@ export class FileUploadComponent implements OnInit {
     formData.append('myFile', this.form.get('myFile').value);
 
     this.http.post('http://localhost:8080/upload', formData).subscribe(
-      // (response) => console.log(response),
-      (response) => this.geoTags = response,
-      (error) => console.log(error)
+      (response: Response) => console.log(response.json()),
+      // (response) => this.map.setView([response.json().lat, response.lng], 16),
+      // (error) => console.log(error)
     );
-    this.map.setView([this.geoTags.lat, this.geoTags.lng], 16);
   }
   initMap() {
     this.map = L.map('map', {
